@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/Silas/Documents/OSU/spring2025/os2/osu-rv6-labs/kernel",
+      "program": "/Users/Silas/Documents/OSU/spring2025/os2/osu-rv6-labs/kernel/build/Debug/outDebug"
+    }
+  ]
+}

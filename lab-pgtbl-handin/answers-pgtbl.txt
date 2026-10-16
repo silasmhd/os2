@@ -1,0 +1,12 @@
+SHORT ANSWER QUESTION: 
+Which other xv6 system call(s) could be made faster using this shared page? Explain how
+
+A xv6 system call that could be made faster using a shared page is getppid. It could store the process's parent PID in the shared region, so user space could directly access it without triggering a kernel trap
+
+SHORT ANSWER QUESTION: 
+Explain the output of vmprint() in terms of Fig 3.4 from the xv6 book. What does page 0 contain? What is in page 2? When running in user mode, could the process read/write the memory mapped by page 1? What does the third to last page contain?
+
+Page 0 is the text segment with the program’s code. It’s marked read+execute (R-XU), so it can be run but not modified.
+Page 2 is the data segment, with initialized global/static variables. It’s marked read+write (R-WU).
+No. Page 1 is unmapped and marked unused.
+The third to last page is unused. It sits below the trapframe and trampoline and helps catch out-of-bounds memory accesses.
